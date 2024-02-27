@@ -25,10 +25,10 @@ class CountdownTimer {
       const mins = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
       const secs = Math.floor((time % (1000 * 60)) / 1000);
 
-      daysRef.textContent = days;
-      hoursRef.textContent = hours;
-      minsRef.textContent = mins;
-      secsRef.textContent = secs;
+      daysRef.textContent = days < 10 ? `0${days}` : days;
+      hoursRef.textContent = hours < 10 ? `0${hours}` : hours;
+      minsRef.textContent = mins < 10 ? `0${mins}` : mins;
+      secsRef.textContent = secs < 10 ? `0${secs}` : secs;
     }, 1000);
   }
 }
